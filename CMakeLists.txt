@@ -1,26 +1,26 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(cluster VERSION 1.0.0)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(INSTALL_DIRECTORY "/opt/apps")
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Gui REQUIRED)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Qml)
+find_package(Qt6 REQUIRED COMPONENTS Gui)
 
 include_directories(
-    "${Qt5Core_INCLUDE_DIRS}"
-    "${Qt5Qml_INCLUDE_DIRS}"
-    "${Qt5Gui_INCLUDE_DIRS}"
+    "${Qt6Core_INCLUDE_DIRS}"
+    "${Qt6Qml_INCLUDE_DIRS}"
+    "${Qt6Gui_INCLUDE_DIRS}"
 )
 
 set(SOURCES Application/main.cpp)
 
-qt5_add_resources(
+qt_add_resources(
     RESOURCES
     GUIModel/GUIModel.qrc
     Assets/Common/3DModelData.qrc
@@ -36,7 +36,7 @@ add_executable(
     ${RESOURCES}
 )
 
-target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Qml Qt5::Gui)
+target_link_libraries(${PROJECT_NAME} Qt6::Core Qt6::Qml Qt6::Gui)
 
 if(NOT DEFINED APPS_INST_DIR)
     set(APPS_INST_DIR /opt/apps)

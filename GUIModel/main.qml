@@ -20,9 +20,9 @@
  * THE SOFTWARE.
  */
 
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Scene3D 2.14
+import QtQuick 6.5
+import QtQuick.Window 6.5
+import QtQuick.Scene3D 2.5
 
 import "./FPSItem"
 import "./ACC"
@@ -127,9 +127,9 @@ Window {
 
         }
 
-        Map{
+        /*Map{
             id: map
-        }
+        }*/
 
         TurnByTurn{
             id:turnByTurn

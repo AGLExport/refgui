@@ -20,9 +20,9 @@
  * THE SOFTWARE.
  */
 
-import QtQuick 2.14
-import QtMultimedia 5.14
-import QtGraphicalEffects 1.14
+import QtQuick 6.5
+import QtMultimedia 6.5
+import Qt5Compat.GraphicalEffects
 
 Item {
     id: map
@@ -52,16 +52,7 @@ Item {
         id: mapParts
         visible:false
         anchors.fill: parent
-        Video {
-            id: mapVideo
-            autoLoad: true
-            anchors.fill: parent
-            visible: true
-            loops: MediaPlayer.Infinite
-            source: "gst-pipeline: filesrc location=" + CurDirPath + "/map_movie.mp4 ! decodebin ! videoconvert ! qtvideosink"
-        }
-
-        Item{
+         Item{
             id:mapMask
             x: 0
             y: 0
