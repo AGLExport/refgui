@@ -21,7 +21,6 @@
  */
 
 import QtQuick 6.5
-import Qt5Compat.GraphicalEffects
 
 Item{
     id: digitalSpeed
@@ -30,7 +29,7 @@ Item{
     readonly property real digitalSpeedMax: 300
     readonly property real digitalSpeedMin: 0
 
-    function onSpeedValueChanged() {
+    onSpeedValueChanged: {
         updateSpeedValue();
         updateSpeedNumPosition();
         updateSpeedNumVisible();

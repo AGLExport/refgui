@@ -21,7 +21,6 @@
  */
 
 import QtQuick 6.5
-import Qt5Compat.GraphicalEffects
 
 Item {
     id: chargeGuage
@@ -107,8 +106,8 @@ Item {
 
             readonly property real pi: 3.1415926535
 
-            vertexShader: "qrc:/Shaders/vert/guageMask.vert"
-            fragmentShader:"qrc:/Shaders/frag/guageMask.frag"
+            vertexShader: "qrc:/Shaders/vert/guageMask.vert.qsb"
+            fragmentShader:"qrc:/Shaders/frag/guageMask.frag.qsb"
         }
     }
     SequentialAnimation{

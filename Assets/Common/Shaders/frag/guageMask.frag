@@ -1,11 +1,16 @@
-uniform mediump float angleBase;
-uniform mediump float angle;
-uniform mediump sampler2D src;
-uniform mediump float qt_Opacity;
-varying mediump vec2 coord;
+#version 440
+layout(location = 0) out vec4 fragColor;
+layout(binding = 1) uniform sampler2D src;
+layout(std140, binding = 0) uniform buf {
+    mat4 qt_Matrix;
+    float qt_Opacity;
+    float angleBase;
+    float angle;
+};
+layout(location = 0) in vec2 coord;
 void main(){
-    mediump vec2 d=2.0*coord-vec2(1.0,1.0);
-    mediump float a=atan(d.x,-d.y);
-    mediump vec4 tex = texture2D(src, coord);
-    gl_FragColor = (angleBase<=a && a<=angle) ?  tex * qt_Opacity : tex * 0.0;
+    vec2 d=2.0*coord-vec2(1.0,1.0);
+    float a=atan(d.x,-d.y);
+    vec4 tex = texture(src, coord);
+    fragColor = (angleBase<=a && a<=angle) ?  tex * qt_Opacity : tex * 0.0;
 }

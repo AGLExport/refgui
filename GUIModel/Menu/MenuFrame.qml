@@ -21,7 +21,6 @@
  */
 
 import QtQuick 6.5
-import Qt5Compat.GraphicalEffects
 
 Item{
     /* public properties */
@@ -53,8 +52,8 @@ Item{
 
         property string icon: ""
         property string txt: ""
-        property var position: -1
-        property var mode: "normal"     /* normal or adas */
+        property int position: -1
+        property string mode: "normal"     /* normal or adas */
 
         property double direction: +1   /* +1:Left -1:Right */
         property int margin: 0

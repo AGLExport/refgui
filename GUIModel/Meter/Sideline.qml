@@ -21,7 +21,6 @@
  */
 
 import QtQuick 6.5
-import Qt5Compat.GraphicalEffects
 
 Item {
     id: sideline

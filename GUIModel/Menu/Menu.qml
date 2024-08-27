@@ -21,9 +21,7 @@
  */
 
 import QtQuick 6.5
-import Qt5Compat.GraphicalEffects
 import QtQuick.Shapes 6.5
-
 
 Item{
     id: menuRoot

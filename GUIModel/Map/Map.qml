@@ -22,7 +22,6 @@
 
 import QtQuick 6.5
 import QtMultimedia 6.5
-import Qt5Compat.GraphicalEffects
 
 Item {
     id: map

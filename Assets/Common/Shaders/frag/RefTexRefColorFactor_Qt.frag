@@ -1,13 +1,16 @@
-/*out*/
+#version 440
 
-uniform mediump sampler2D u_Texture;
-uniform mediump vec3 u_rgbFactor;
-uniform mediump float u_alphaFactor;
+layout(std140, binding = 0) uniform buf {
+    mat4 mvp;
+    vec3 u_rgbFactor;
+    float u_alphaFactor;
+};
+layout(binding = 1) uniform sampler2D u_Texture;
 
-/*in*/
-varying mediump vec2 v_texCoord;
+layout(location = 0) in vec2 v_texCoord;
+layout(location = 0) out vec4 fragColor;
 
 void main()
 {
-    gl_FragColor = texture2D(u_Texture, v_texCoord) * vec4(u_rgbFactor, u_alphaFactor);
+    fragColor = texture(u_Texture, v_texCoord) * vec4(u_rgbFactor, u_alphaFactor);
 }

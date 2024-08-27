@@ -64,8 +64,8 @@ Material{
                 renderPasses: [
                     RenderPass {
                         shaderProgram: ShaderProgram {
-                            vertexShaderCode    : loadSource("qrc:/Shaders/vert/RefTrans_Qt.vert")
-                            fragmentShaderCode  : loadSource("qrc:/Shaders/frag/RefTexRefColorFactor_Qt.frag")
+                            vertexShaderCode    : loadSource("qrc:/Shaders/vert/RefTrans_Qt.vert.qsb")
+                            fragmentShaderCode  : loadSource("qrc:/Shaders/frag/RefTexRefColorFactor_Qt.frag.qsb")
                         }
                         renderStates: [
 

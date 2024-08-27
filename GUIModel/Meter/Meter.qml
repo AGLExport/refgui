@@ -21,7 +21,6 @@
  */
 
 import QtQuick 6.5
-import Qt5Compat.GraphicalEffects
 
 Item {
     id: meter
@@ -53,15 +52,15 @@ Item {
        Connections{
            target: rootItem
            function onTransNormalToAdas() {
-               / *nop */
+               /* nop */
            }
 
            function onTransAdasToMap() {
-               / *nop */
+               /* nop */
            }
 
            function onTransMapToNormal() {
-               / *nop */
+               /* nop */
            }
        }
 
