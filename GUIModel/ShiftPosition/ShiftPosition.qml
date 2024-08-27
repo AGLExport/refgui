@@ -27,21 +27,21 @@ Item {
     property int shiftId  : 0
     property Image mId
 
-    onShiftIdChanged: {
+    function onShiftIdChanged() {
         idchange()
     }
 
     Connections{
         target: rootItem
-        onTransNormalToAdas:{
+        function onTransNormalToAdas() {
             normalToAdasAnimationShift.start()
         }
 
-        onTransAdasToMap:{
+        function onTransAdasToMap() {
             /**/
         }
 
-        onTransMapToNormal:{
+        function onTransMapToNormal() {
             mapToNormalAnimationShift.start()
         }
     }

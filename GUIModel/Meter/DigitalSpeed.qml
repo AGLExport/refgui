@@ -30,7 +30,7 @@ Item{
     readonly property real digitalSpeedMax: 300
     readonly property real digitalSpeedMin: 0
 
-    onSpeedValueChanged: {
+    function onSpeedValueChanged() {
         updateSpeedValue();
         updateSpeedNumPosition();
         updateSpeedNumVisible();
@@ -38,15 +38,15 @@ Item{
 
     Connections{
         target: rootItem
-        onTransNormalToAdas:{
+        function onTransNormalToAdas() {
             normalToAdasAnimation.start()
         }
 
-        onTransAdasToMap:{
+        function onTransAdasToMap() {
             /**/
         }
 
-        onTransMapToNormal:{
+        function onTransMapToNormal() {
             mapToNormalAnimation.start()
         }
     }

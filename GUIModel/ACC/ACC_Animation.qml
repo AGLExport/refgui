@@ -54,7 +54,7 @@ Item {
 
     Connections{
         target: rootItem
-        onTransNormalToAdas:{
+        function onTransNormalToAdas() {
             if(rootItem.set_state == "set_default"){
                 fadeout_in_default.start()
             }else if(rootItem.set_state == "set_middle"){
@@ -79,12 +79,12 @@ Item {
                 rootItem.arrow_state = "arrow_adas_near"}
         }
 
-        onTransAdasToMap:{
+        function onTransAdasToMap() {
             adasToMapAnimation_acc3d.start()
 
         }
 
-        onTransMapToNormal:{
+        function onTransMapToNormal() {
             ddditemTonormalsize.start()
             if(rootItem.set_state == "set_default"){
                 fadeout_in_default.start()

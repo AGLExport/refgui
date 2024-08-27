@@ -51,15 +51,15 @@ Item {
 
         Connections{
             target: rootItem
-            onTransNormalToAdas:{
+            function onTransNormalToAdas() {
                 normalToAdasAnimationTbt.start()
             }
 
-            onTransAdasToMap:{
+            function onTransAdasToMap() {
                 adasToMapAnimationTbt.start()
             }
 
-            onTransMapToNormal:{
+            function onTransMapToNormal() {
                 mapToNormalAnimationTbt.start()
             }
         }

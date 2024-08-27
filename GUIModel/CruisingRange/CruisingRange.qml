@@ -35,22 +35,22 @@ Item{
     readonly property real cruisingRangeValueMax: 999.9
     readonly property real cruisingRangeValueMin: 0
 
-    onCruisingRangeValueChanged: {
+    function onCruisingRangeValueChanged() {
         updateCruisingRangeValue();
         updateCruisingRangeVisible();
     }
 
     Connections{
         target: rootItem
-        onTransNormalToAdas:{
+        function onTransNormalToAdas() {
             normalToAdasAnimationFuel.start()
         }
 
-        onTransAdasToMap:{
+        function onTransAdasToMap() {
             /**/
         }
 
-        onTransMapToNormal:{
+        function onTransMapToNormal(){
             mapToNormalAnimationFuel.start()
         }
     }

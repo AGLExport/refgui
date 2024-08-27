@@ -275,7 +275,7 @@ Item{
             Image{
                 id: menuIcon
                 source:menuFrame.icon
-                x: 26 * direction + margin
+                x: 26 * parent.direction + parent.margin
                 width: 76
                 height: 90
                 anchors.verticalCenter: menuFrameBg.verticalCenter
@@ -283,7 +283,7 @@ Item{
 
             Text {
                 id: menuText
-                x: 122 * direction + margin
+                x: 122 * parent.direction + parent.margin
                 width: 68
                 height: 26
                 y:46

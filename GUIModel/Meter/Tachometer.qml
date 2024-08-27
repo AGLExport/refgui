@@ -37,15 +37,15 @@ Item {
 
     Connections{
         target: rootItem
-        onTransNormalToAdas:{
+        function onTransNormalToAdas() {
             normalToAdasAnimation.start()
         }
 
-        onTransAdasToMap:{
+        function onTransAdasToMap() {
             /**/
         }
 
-        onTransMapToNormal:{
+        function onTransMapToNormal() {
             mapToNormalAnimation.start()
         }
     }

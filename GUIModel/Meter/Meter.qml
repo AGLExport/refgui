@@ -52,15 +52,15 @@ Item {
 
        Connections{
            target: rootItem
-           onTransNormalToAdas:{
+           function onTransNormalToAdas() {
                / *nop */
            }
 
-           onTransAdasToMap:{
+           function onTransAdasToMap() {
                / *nop */
            }
 
-           onTransMapToNormal:{
+           function onTransMapToNormal() {
                / *nop */
            }
        }

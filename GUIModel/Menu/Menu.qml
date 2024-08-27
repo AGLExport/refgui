@@ -30,47 +30,47 @@ Item{
 
     Connections{
         target: rootItem
-        onTransNormalToAdas:{
+        function onTransNormalToAdas() {
             menuMain.startAnimationNormalToAdas()
             menuContents.startAnimationNormalToAdas()
             menuShade.startAnimationNormalToAdas()
         }
 
-        onTransAdasToMap:{
+        function onTransAdasToMap() {
             /**/
         }
 
-        onTransMapToNormal:{
+        function onTransMapToNormal() {
             menuMain.startAnimationMapToNormal()
             menuContents.startAnimationMapToNormal()
             menuShade.startAnimationMapToNormal()
         }
 
-        onKeyPressed_Up:{
+        function onKeyPressed_Up() {
             if(menu.state === "open"){
                 menuMain.incrementIndex()
             }
         }
 
-        onKeyPressed_Down:{
+        function onKeyPressed_Down() {
             if(menu.state === "open"){
                 menuMain.decrementIndex()
             }
         }
 
-        onKeyPressed_Left:{
+        function onKeyPressed_Left() {
             if(menu.state === "close"){
                 menuContents.decrementIndex()
             }
         }
 
-        onKeyPressed_Right:{
+        function onKeyPressed_Right() {
             if(menu.state === "close"){
                 menuContents.incrementIndex()
             }
         }
 
-        onKeyPressed_Enter:{
+        function onKeyPressed_Enter() {
             if(menu.state === "close"){
                 menuContents.enter()
             }else if(menu.state === "open"){
@@ -80,7 +80,7 @@ Item{
             }
         }
 
-        onKeyPressed_Menu:{
+        function onKeyPressed_Menu() {
             if(menu.state === "close"){
                 menuContents.open()
                 menuMain.open()
